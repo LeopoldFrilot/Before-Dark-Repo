@@ -4,5 +4,29 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 9601312e2f34ab04a9be11f1d888a1db
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 549260c2ff1d6e2499e4c49e4e1e3000
+  - enabled: 1
+    path: Assets/Scenes/Forest Boss.unity
+    guid: a9d0010074b843b4b9f0bde241fc9815
+  - enabled: 1
+    path: Assets/Scenes/Playground.unity
+    guid: df987c98602c88a419e0c0f5a3a2f486
+  - enabled: 1
+    path: Assets/Scenes/Playground Boss.unity
+    guid: 49dd7c4c7224b564dba188a52a2e1428
+  - enabled: 1
+    path: Assets/Scenes/Suburbs.unity
+    guid: de8ef47356d4cb447b77ca239dccfa24
+  - enabled: 1
+    path: Assets/Scenes/Suburbs Boss.unity
+    guid: 81f15c36be768314a8201e40bf2e1667
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: b667f867d0a9bc947bf0d3d456ac2f97
   m_configObjects: {}
