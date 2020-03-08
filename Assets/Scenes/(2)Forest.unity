@@ -212,36 +212,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c3642a14c57bf6489225beec6cd88cd, type: 3}
---- !u!1 &784386985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 784386986}
-  m_Layer: 0
-  m_Name: Pivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &784386986
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784386985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1407230026}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &986895230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,32 +284,6 @@ PrefabInstance:
 --- !u!1 &997664094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5306076148008945423, guid: 6c3642a14c57bf6489225beec6cd88cd,
-    type: 3}
-  m_PrefabInstance: {fileID: 571195633}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &997664095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997664094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 480e0d07bc016d5419ba6dd75d389568, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpForce: 20
-  controller: {fileID: 0}
-  gravityScale: 5
-  animate: {fileID: 0}
-  pivot: {fileID: 784386986}
-  rotation: 10
-  playerModel: {fileID: 997664094}
---- !u!4 &997664096 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5306076148008945420, guid: 6c3642a14c57bf6489225beec6cd88cd,
     type: 3}
   m_PrefabInstance: {fileID: 571195633}
   m_PrefabAsset: {fileID: 0}
@@ -514,32 +458,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1407230024}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1407230026 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2042343807290633566, guid: 816c225db1ef4234fbc703f0700c9dd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1407230024}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1407230027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407230025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99629d4c1c3891443b9eb76cf7508d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 997664096}
-  offset: {x: 0.43, y: -4.68, z: 10.59}
-  useOffsetValues: 0
-  rotateSpeed: 5
-  pivot: {fileID: 784386986}
-  maxViewAngle: 55
-  minViewAngle: -50
-  invertY: 0
 --- !u!1001 &1636169222
 PrefabInstance:
   m_ObjectHideFlags: 0
