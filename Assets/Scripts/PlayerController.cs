@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection; //vector object ref used to control move direction (x,y,z)
     public float gravityScale;  //float to control gravity from inspector
 
-    public Animator animate; //used for animation of charactor model
+    // public Animator animate; //used for animation of charactor model
     public Transform pivot; //setting charachter to turn with camera rotation
     public float rotation; //rotation speed of character 
 
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //this code animates character to run motion when directional keys are pressed 
-        animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        //animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
 
         //exit game with button press "Escape"
         if (Input.GetKey("escape"))
