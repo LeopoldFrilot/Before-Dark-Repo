@@ -10,7 +10,7 @@ public class GameLoop : MonoBehaviour
 
     // Variables for function
     public float autoSaveWindow = 10f;
-    float timeWithoutSave = 0f;
+    // float timeWithoutSave = 0f;
     public float timerPenaltyForDying = 10f;
 
     // Variables to be saved/stored
@@ -39,14 +39,13 @@ public class GameLoop : MonoBehaviour
     public void CheckPause()
     {
         // Saves for now
-        if (Input.GetButtonDown("Cancel")) // The escape key works
+        if (Input.GetButtonDown("Save")) // "=" button
         {
             Debug.Log("Saved");
-            // For now, it just saves the game
             SaveState();
         }
         // Loads save for now
-        if(Input.GetButtonDown("Submit")) // The enter key works
+        if(Input.GetButtonDown("Load")) // "-" button
         {
             Debug.Log("Loaded");
             LoadState();

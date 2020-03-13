@@ -42,7 +42,6 @@ public class CameraController : MonoBehaviour
 
         //get y position of the mouse and rotate the pivot
         float vertical = Input.GetAxis("Mouse Y") * rotateSpeed; //rotating camera on y axis
-
         //code block to give players the option of inverting thier camera
         if (invertY)
         {
@@ -57,10 +56,12 @@ public class CameraController : MonoBehaviour
         if (pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f)
         { //eulerAngles.x instead of .x to avoid taking the x value of the Quaternion
             pivot.rotation = Quaternion.Euler(maxViewAngle, 0, 0);
+            Debug.Log("Triggered too high");
         }
-        if (pivot.rotation.eulerAngles.x > 180 && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
+        if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle)
         { //315 is 45 degrees below x axis
             pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
+            Debug.Log("Triggered too low");
         }
 
         // move camera based on the current rotation of the target and the orginal offset
@@ -74,6 +75,7 @@ public class CameraController : MonoBehaviour
         if (transform.position.y < target.position.y)
         { //prevent camera from going through the ground if less than player1 "target position"
             transform.position = new Vector3(transform.position.x, target.position.y - .5f, transform.position.z);
+            Debug.Log("Correcting for underground");
         }
     }
 }

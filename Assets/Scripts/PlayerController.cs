@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     // public Animator animate; //used for animation of charactor model
     public Transform pivot; //setting charachter to turn with camera rotation
-    public float rotation; //rotation speed of character 
+    public float rotationSpeed; //rotation speed of character 
 
     public GameObject playerModel;
     // Start is called before the first frame update
@@ -49,14 +49,14 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, pivot.rotation.eulerAngles.y, 0f);
             //used for gradual rotations for smoother camera rotations
             Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
-            playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotation * Time.deltaTime); //slerp one of the 3 movement types in unity (for a smooth rotation w/ camera)    
+            playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotationSpeed * Time.deltaTime); //slerp one of the 3 movement types in unity (for a smooth rotation w/ camera)    
         }
 
         //this code animates character to run motion when directional keys are pressed 
         //animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
 
         //exit game with button press "Escape"
-        if (Input.GetKey("escape"))
+        if (Input.GetButtonDown("Cancel"))
         {
             Debug.Log("quit game");
             Application.Quit();
