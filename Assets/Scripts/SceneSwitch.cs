@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     // External sources
-    public GameObject gameloopScriptHolder; // Current location script is held
 
     // Variables for scenes
     string settingsScn = "Settings Screen";
     string loseScn = "Lose Screen";
+    string pauseScn = "Pause Screen";
 
     private void Start()
     {
-        gameloopScriptHolder = GameObject.Find("Main Camera");
     }
     // Loads next level based on File->Build Settings scene order
     public void LoadNextLevel()
@@ -28,9 +27,6 @@ public class SceneSwitch : MonoBehaviour
     }
     public void LoadIntro()
     {
-        GameLoop gameScript = gameloopScriptHolder.GetComponent<GameLoop>();
-
-        gameScript.HardReset();
         SceneManager.LoadScene(0);
     }
 
@@ -42,6 +38,10 @@ public class SceneSwitch : MonoBehaviour
     public void LoadLoseScreen()
     {
         SceneManager.LoadScene(loseScn);
+    }
+    public void LoadPauseScreen()
+    {
+        SceneManager.LoadScene(pauseScn);
     }
     // Add any other scenes in this fashion that appear in the 'Misc Scenes' folder
     public void Quit()
