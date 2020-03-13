@@ -308,9 +308,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &240542494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 80212f1697003ec4d8b59bdcb908a1fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 860955322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &240542495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 80212f1697003ec4d8b59bdcb908a1fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 860955322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &240542496 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 80212f1697003ec4d8b59bdcb908a1fc,
     type: 3}
   m_PrefabInstance: {fileID: 860955322}
   m_PrefabAsset: {fileID: 0}
@@ -474,6 +486,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.67
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 80212f1697003ec4d8b59bdcb908a1fc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 326a3204f5b38d34e85c41a6252eba51, type: 2}
     - target: {fileID: 13700000, guid: 80212f1697003ec4d8b59bdcb908a1fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -856,9 +872,10 @@ MonoBehaviour:
   jumpForce: 20
   controller: {fileID: 0}
   gravityScale: 5
+  animate: {fileID: 240542496}
   pivot: {fileID: 1197073493}
   rotationSpeed: 10
-  playerModel: {fileID: 1705267989}
+  playerModel: {fileID: 240542494}
 --- !u!136 &1705267992
 CapsuleCollider:
   m_ObjectHideFlags: 0
