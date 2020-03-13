@@ -2,23 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameLoop : MonoBehaviour
 {
     // Calling External Objects for later use
+    public GameObject pablo;
 
-    // Game Design Knobs
-    [SerializeField] float maxTime = 300f;
-    [SerializeField] float startingHealth = 500f;
+    // Variables for function
+    public float autoSaveWindow = 10f;
+    float timeWithoutSave = 0f;
+    public float timerPenaltyForDying = 10f;
 
-    // Local Variables
-    float timer;
-    float currHealth;
+    // Variables to be saved/stored
+    public float maxTime = 300f;
+    public float maxHealth = 500f;
+    public float timer;
+    public float currHealth;
+    public int currLevel; 
 
     // Start is called before the first frame update
     void Start()
     {
         timer = maxTime;
-        currHealth = startingHealth;
+        currHealth = maxHealth;
+        currLevel = GetComponent<SceneSwitch>().GetCurrSceneIndex();
     }
 
     // Update is called once per frame
@@ -26,20 +33,28 @@ public class GameLoop : MonoBehaviour
     {
         CheckPause();
         UpdateTime();
-        UpdateHealth();
+        // CheckAutosave();
     }
 
     public void CheckPause()
     {
-        //Pause Condition
-        if (Input.GetButtonDown("Cancel"))
+        // Saves for now
+        if (Input.GetButtonDown("Cancel")) // The escape key works
         {
-            GetComponent<SceneSwitch>().LoadPauseScreen();
+            Debug.Log("Saved");
+            // For now, it just saves the game
+            SaveState();
+        }
+        // Loads save for now
+        if(Input.GetButtonDown("Submit")) // The enter key works
+        {
+            Debug.Log("Loaded");
+            LoadState();
         }
     }
-    public void UpdateTime()
+    private void UpdateTime()
     {
-        if(timer >= 0) // && GetComponent<SceneSwitch>().GetCurrSceneIndex() > 0 && GetComponent<SceneSwitch>().GetCurrSceneIndex() < 8)
+        if(timer >= 0 && currLevel > 0 && currLevel < 8)
         {
             timer -= Time.deltaTime;
         }
@@ -48,7 +63,56 @@ public class GameLoop : MonoBehaviour
             GetComponent<SceneSwitch>().LoadLoseScreen();
         }
     }
-    public void UpdateHealth()
+    /*private void CheckAutosave()
     {
+        timeWithoutSave += Time.deltaTime;
+        if (timeWithoutSave >= autoSaveWindow)
+        {
+            SaveState();
+            timeWithoutSave = 0f;
+        }
+    }*/
+    public void UpdateHealth(float deltaHealth)
+    {
+        currHealth += deltaHealth;
+        if(currHealth <= 0)
+        {
+            pablo.transform.position = StartingPlacePerLevel(currLevel);
+            timer -= timerPenaltyForDying;
+            currHealth = maxHealth;
+        }
+    }// Will be called when Pablo is hit or consumes a snack
+    public void SaveState()
+    {
+        SaveManager.SaveState(this);
+    }
+    public void LoadState() // Loading completely from nothing (mainly used for the continue button)
+    {
+        PlayerData data = SaveManager.LoadState();
+        currLevel = data.currLevel;
+        currHealth = data.currHealth;
+        timer = data.currTime;
+        maxHealth = data.maxHealth;
+
+        Vector3 loadedPosition;
+        loadedPosition.x = data.playerPosition[0];
+        loadedPosition.y = data.playerPosition[1];
+        loadedPosition.z = data.playerPosition[2];
+        pablo.transform.position = loadedPosition;
+    }
+    public Vector3 StartingPlacePerLevel(int levelNum) // To be edited later
+    {
+        if (levelNum == 1)
+            return new Vector3(0, 0, 0);
+        if (levelNum == 2)
+            return new Vector3(0, 0, 0);
+        if (levelNum == 3)
+            return new Vector3(0, 0, 0);
+        if (levelNum == 4)
+            return new Vector3(0, 0, 0);
+        if (levelNum == 5)
+            return new Vector3(0, 0, 0);
+        else
+            return new Vector3(0, 0, 0);
     }
 }

@@ -56,6 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c09c00399912a247ade8ba6ce2c5980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitch: {fileID: 0}
-  UITime: {fileID: 0}
-  UIHealth: {fileID: 0}
+  pablo: {fileID: 0}
+  maxTime: 300
+  startingHealth: 500
+  timer: 0
+  currHealth: 0
+  currLevel: 0
