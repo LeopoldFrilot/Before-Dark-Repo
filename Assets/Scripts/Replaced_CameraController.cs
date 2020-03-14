@@ -28,8 +28,10 @@ public class CameraController : MonoBehaviour
         }
         pivot.transform.position = target.transform.position;
         pivot.transform.parent = null;
-        Cursor.lockState = CursorLockMode.Locked; //remove cursor from screen
-        Cursor.visible = false;
+
+       // Cursor.lockState = CursorLockMode.Locked; //remove cursor from screen
+       // Cursor.visible = false;
+
     }
 
     // Update is called once per frame
