@@ -39,17 +39,17 @@ public class CameraFollow : MonoBehaviour
     void Update() {
         // set up rotation for analog sticks here (supports controller input as well)
 
-        float inputX = Input.GetAxis("RightStickHorizontal");
-        float inputZ = Input.GetAxis("RightStickVertical");
+        //float inputX = Input.GetAxis("RightStickHorizontal");
+        //float inputZ = Input.GetAxis("RightStickVertical");
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
-        finalInputX = inputX + mouseX; //final input will return input for eaither mouse or controller
-        finalInputZ = inputZ + mouseY;
+        finalInputX = mouseX; // + inputX; //final input will return input for eaither mouse or controller
+        finalInputZ = mouseY; // + inputZ;
 
         rotY += finalInputX * inputSensitivity * Time.deltaTime;
         rotX += finalInputZ * inputSensitivity * Time.deltaTime;
 
-        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
+        rotX = Mathf.Clamp(rotX, -15f, clampAngle);
         //look into adding another clamp angle for min and height
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
