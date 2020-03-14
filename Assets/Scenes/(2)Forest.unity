@@ -419,14 +419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99629d4c1c3891443b9eb76cf7508d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1606804152}
-  offset: {x: 0, y: 0, z: 5}
-  useOffsetValues: 1
-  rotateSpeed: 5
-  pivot: {fileID: 310574628}
-  maxViewAngle: 60
-  minViewAngle: -30
-  invertY: 0
 --- !u!1 &519438419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c015646cfa53f49ab88a769a347308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraMoveSpeed: 250
+  CameraMoveSpeed: 190
   CameraFollowObj: {fileID: 337292801}
   clampAngle: 70
   inputSensitivity: 200
