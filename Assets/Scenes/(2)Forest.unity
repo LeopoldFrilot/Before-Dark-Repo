@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1606804152}
-  offset: {x: 5, y: 0, z: -5}
+  offset: {x: 0, y: 0, z: 5}
   useOffsetValues: 1
   rotateSpeed: 5
   pivot: {fileID: 310574628}
