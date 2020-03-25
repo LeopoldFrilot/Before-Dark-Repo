@@ -20,6 +20,7 @@ public class GoblinController : MonoBehaviour
             Debug.Log("Hit");
             curHealth -= 10;
             if(curHealth <= 0) Destroy(gameObject);
+            Debug.Log(curHealth);
         }
     }
 
