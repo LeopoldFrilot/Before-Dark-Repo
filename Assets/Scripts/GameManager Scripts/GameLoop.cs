@@ -10,22 +10,31 @@ public class GameLoop : MonoBehaviour
 
     // Variables for function
     public float autoSaveWindow = 10f;
-    // float timeWithoutSave = 0f;
+    float timeWithoutSave = 0f;
     public float timerPenaltyForDying = 10f;
+    public int currLevel;
 
     // Variables to be saved/stored
     public float maxTime = 300f;
     public float maxHealth = 500f;
     public float timer;
     public float currHealth;
-    public int currLevel; 
+ 
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = maxTime;
-        currHealth = maxHealth;
         currLevel = GetComponent<SceneSwitch>().GetCurrSceneIndex();
+        if(currLevel == 1)
+        {
+            timer = maxTime;
+            currHealth = maxHealth;
+        }
+        else
+        {
+            LoadState();
+            pablo.transform.position = StartingPlacePerLevel(currLevel);
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +42,7 @@ public class GameLoop : MonoBehaviour
     {
         CheckPause();
         UpdateTime();
-        // CheckAutosave();
+        CheckAutosave();
     }
 
     public void CheckPause()
@@ -41,14 +50,14 @@ public class GameLoop : MonoBehaviour
         // Saves for now
         if (Input.GetButtonDown("Save")) // "=" button
         {
-            Debug.Log("Saved");
+            Debug.Log("Saving...");
             SaveState();
         }
         // Loads save for now
         if(Input.GetButtonDown("Load")) // "-" button
         {
-            Debug.Log("Loaded");
-            LoadState();
+            Debug.Log("Loading...");
+            Invoke("LoadState", 5f);
         }
     }
     private void UpdateTime()
@@ -62,15 +71,16 @@ public class GameLoop : MonoBehaviour
             GetComponent<SceneSwitch>().LoadLoseScreen();
         }
     }
-    /*private void CheckAutosave()
+    private void CheckAutosave()
     {
         timeWithoutSave += Time.deltaTime;
         if (timeWithoutSave >= autoSaveWindow)
         {
+            print("autosaving...");
             SaveState();
             timeWithoutSave = 0f;
         }
-    }*/
+    }
     public void UpdateHealth(float deltaHealth)
     {
         currHealth += deltaHealth;
@@ -84,11 +94,12 @@ public class GameLoop : MonoBehaviour
     public void SaveState()
     {
         SaveManager.SaveState(this);
+        Debug.Log("Saved");
     }
     public void LoadState() // Loading completely from nothing (mainly used for the continue button)
     {
         PlayerData data = SaveManager.LoadState();
-        currLevel = data.currLevel;
+        // currLevel = data.currLevel;  This SHOULD not be needed, but I'll keep it here for now
         currHealth = data.currHealth;
         timer = data.currTime;
         maxHealth = data.maxHealth;
@@ -98,6 +109,8 @@ public class GameLoop : MonoBehaviour
         loadedPosition.y = data.playerPosition[1];
         loadedPosition.z = data.playerPosition[2];
         pablo.transform.position = loadedPosition;
+        Debug.Log(pablo.transform.position);
+        Debug.Log("Loaded");
     }
     public Vector3 StartingPlacePerLevel(int levelNum) // To be edited later
     {
