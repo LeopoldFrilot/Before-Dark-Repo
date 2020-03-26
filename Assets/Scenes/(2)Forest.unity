@@ -1077,6 +1077,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1945826534, guid: 7cf53a1dcf494d746b612ed046b79347, type: 3}
+      propertyPath: m_Text
+      value: Move with WASD; Jump with Spacebar; Save with "="; Load with "-"; Attack
+        with "left click"
+      objectReference: {fileID: 0}
     - target: {fileID: 6713152697454760547, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_Name
