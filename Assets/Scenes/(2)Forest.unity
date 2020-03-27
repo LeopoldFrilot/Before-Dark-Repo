@@ -998,6 +998,10 @@ PrefabInstance:
       propertyPath: startingSunRotation
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1893124832, guid: 791bd4468f61af643a97d2933ac980c1, type: 3}
+      propertyPath: lightSections
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2957708682001177850, guid: 791bd4468f61af643a97d2933ac980c1,
         type: 3}
       propertyPath: m_Name
@@ -1077,11 +1081,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1945826534, guid: 7cf53a1dcf494d746b612ed046b79347, type: 3}
-      propertyPath: m_Text
-      value: Move with WASD; Jump with Spacebar; Save with "="; Load with "-"; Attack
-        with "left click"
-      objectReference: {fileID: 0}
     - target: {fileID: 6713152697454760547, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_Name

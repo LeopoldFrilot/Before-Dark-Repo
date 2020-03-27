@@ -72,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -751, y: 20}
+  m_AnchoredPosition: {x: -751, y: -67}
   m_SizeDelta: {x: 890.6, y: 36.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1100333757
@@ -269,7 +269,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Move with WASD; Jump with Spacebar; Save with "="; Load with "-"; Attack
-    with ???
+    with "left click"
 --- !u!1 &6713152696403938014
 GameObject:
   m_ObjectHideFlags: 0
