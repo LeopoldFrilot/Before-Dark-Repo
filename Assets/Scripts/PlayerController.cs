@@ -15,11 +15,27 @@ public class PlayerController : MonoBehaviour
     public Transform pivot; //setting charachter to turn with camera rotation
     public float rotationSpeed; //rotation speed of character 
 
+    public int numSearches = 0;
+
     public GameObject playerModel;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>(); //initializes public controller variable in inspector
+    }
+
+    void findItem()
+    {
+
+    }
+
+    //Search a location for an item
+    void Search()
+    {
+        numSearches++;
+        Random ran = new Random();
+        int prob = gen.Next(8)+2;
+        if(prob numSearches >= prob) findItem();
     }
 
     // Update is called once per frame
