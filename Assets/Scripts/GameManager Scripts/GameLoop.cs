@@ -57,7 +57,7 @@ public class GameLoop : MonoBehaviour
         if(Input.GetButtonDown("Load")) // "-" button
         {
             Debug.Log("Loading...");
-            Invoke("LoadState", 5f);
+            Invoke("LoadState", 1f);
         }
     }
     private void UpdateTime()
@@ -111,6 +111,7 @@ public class GameLoop : MonoBehaviour
         pablo.transform.position = loadedPosition;
         Debug.Log(pablo.transform.position);
         Debug.Log("Loaded");
+        GetComponent<LightAdjuster>().InitializeSun(); // The sun will go back where it needs to based on the time.
     }
     public Vector3 StartingPlacePerLevel(int levelNum) // To be edited later
     {

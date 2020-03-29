@@ -934,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 1789075595884033073, guid: 256f23baa763dfd4a8b847f16789fea9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.9
+      value: -10.824
       objectReference: {fileID: 0}
     - target: {fileID: 1789075595884033073, guid: 256f23baa763dfd4a8b847f16789fea9,
         type: 3}
@@ -996,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 1143518475}
     - target: {fileID: 1893124832, guid: 791bd4468f61af643a97d2933ac980c1, type: 3}
       propertyPath: startingSunRotation
-      value: 150
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1893124832, guid: 791bd4468f61af643a97d2933ac980c1, type: 3}
       propertyPath: lightSections

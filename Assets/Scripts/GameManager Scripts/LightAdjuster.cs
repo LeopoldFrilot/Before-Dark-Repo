@@ -17,8 +17,7 @@ public class LightAdjuster : MonoBehaviour
     void Start()
     {
         // initiating sun height
-        Vector3 startingSun = new Vector3(startingSunRotation, 0, 0);
-        sun.transform.rotation = Quaternion.Euler(startingSun);
+        InitializeSun();
 
         gameLoop = gameObject.GetComponent<GameLoop>();
         amntRotated = (maxSunRotation - startingSunRotation)/lightSections;
@@ -36,5 +35,11 @@ public class LightAdjuster : MonoBehaviour
             sun.transform.rotation = Quaternion.Euler(deltaRot);
             count--;
         }
+    }
+
+    public void InitializeSun()
+    {
+        Vector3 startingSun = new Vector3(startingSunRotation, 0, 0);
+        sun.transform.rotation = Quaternion.Euler(startingSun);
     }
 }
