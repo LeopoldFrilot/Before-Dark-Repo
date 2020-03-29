@@ -30,13 +30,13 @@ public class PlayerController : MonoBehaviour
     }
 
     //Search a location for an item
-    void Search()
-    {
-        numSearches++;
-        Random ran = new Random();
-        int prob = gen.Next(8)+2;
-        if(prob numSearches >= prob) findItem();
-    }
+    //void Search()
+    //{
+    //    numSearches++;
+    //    Random ran = new Random();
+    //    int prob = gen.Next(8)+2;
+    //    if(prob numSearches >= prob) findItem();
+    //}
 
     // Update is called once per frame
     void Update() //Remark: using rigidbody for movement is better for racing games (eg. jumping a ramp)
