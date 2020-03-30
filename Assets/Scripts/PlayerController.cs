@@ -17,11 +17,15 @@ public class PlayerController : MonoBehaviour
 
     public int numSearches = 0;
 
+    // Importing GameManager for state management
+    public GameObject gameManager;
+    
     public GameObject playerModel;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>(); //initializes public controller variable in inspector
+        gameManager = GameObject.Find("GameManager");
     }
 
     void findItem()
@@ -40,6 +44,16 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() //Remark: using rigidbody for movement is better for racing games (eg. jumping a ramp)
+    {
+        if (!(gameManager.GetComponent<GameLoop>().IsPaused())) // checking if the game is paused
+        {
+            Move();
+        }
+
+        //exit game with button press "Escape" was moved to GameLoop
+    }
+
+    private void Move()
     {
         //new move direction with rotation of mouse
         float yStore = moveDirection.y; //save y direction in a float to correct jump
@@ -74,12 +88,5 @@ public class PlayerController : MonoBehaviour
 
         //this code animates character to run motion when directional keys are pressed 
         animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
-
-        //exit game with button press "Escape"
-        if (Input.GetButtonDown("Cancel"))
-        {
-            Debug.Log("quit game");
-            Application.Quit();
-        }
     }
 }

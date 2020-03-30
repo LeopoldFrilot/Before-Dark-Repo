@@ -19,11 +19,16 @@ public class GameLoop : MonoBehaviour
     public float maxHealth = 500f;
     public float timer;
     public float currHealth;
+
+    // Possible states that the game can be in
+    enum State { Play, Pause}
+    State state;
  
 
     // Start is called before the first frame update
     void Start()
     {
+        state = State.Play;
         currLevel = GetComponent<SceneSwitch>().GetCurrSceneIndex();
         if(currLevel == 1)
         {
@@ -40,24 +45,44 @@ public class GameLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckPause();
-        UpdateTime();
-        CheckAutosave();
+        if(state == State.Play)
+        {
+            CheckInputs();
+            UpdateTime();
+            CheckAutosave();
+        }
+        else if(state == State.Pause)
+        {
+            Pause();
+        }
+        else
+        {
+            // No other states yet
+        }
     }
 
-    public void CheckPause()
+    private void CheckInputs()
     {
+        if (Input.GetButtonDown("Cancel")) // "esc" button to pause
+        {
+                Debug.Log("Pause game (SCREEN NOT IMPLEMENTED, PRESS SPACE TO RESUME)");
+                state = State.Pause;
+        }
         // Saves for now
         if (Input.GetButtonDown("Save")) // "=" button
         {
+            state = State.Pause;
             Debug.Log("Saving...");
             SaveState();
+            state = State.Play;
         }
         // Loads save for now
         if(Input.GetButtonDown("Load")) // "-" button
         {
+            state = State.Pause;
             Debug.Log("Loading...");
-            Invoke("LoadState", 1f);
+            LoadState();
+            state = State.Play;
         }
     }
     private void UpdateTime()
@@ -127,5 +152,28 @@ public class GameLoop : MonoBehaviour
             return new Vector3(0, 0, 0);
         else
             return new Vector3(0, 0, 0);
+    }
+
+    public void Pause()
+    {
+        // Create Pause screen
+        if (Input.GetButtonDown("Submit")) // "space" button to unpause
+        {
+            Debug.Log("Resume game");
+            state = State.Play;
+        }
+        if (Input.GetButtonDown("Save")) // "=" key to quit
+        {
+            Debug.Log("Quit game");
+            Application.Quit();
+        }
+    }
+
+    public bool IsPaused()
+    {
+        if (state == State.Pause)
+            return true;
+        else
+            return false;
     }
 }
