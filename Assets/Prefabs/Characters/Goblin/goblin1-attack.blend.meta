@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: -6704909483674090919
     second: ArmatureAction_001
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects: {}
   materials:
     materialImportMode: 1
