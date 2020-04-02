@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2957708682001177853}
   - component: {fileID: 6432219025277827256}
   - component: {fileID: 1893124832}
+  - component: {fileID: 415875267}
+  - component: {fileID: 415875271}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -58,13 +60,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pablo: {fileID: 0}
-  autoSaveWindow: 10
+  autoSaveWindow: 60
   timerPenaltyForDying: 10
+  currLevel: 0
   maxTime: 300
   maxHealth: 500
   timer: 0
   currHealth: 0
-  currLevel: 0
 --- !u!114 &1893124832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,4 +82,29 @@ MonoBehaviour:
   startingSunRotation: 90
   maxSunRotation: 180
   sun: {fileID: 0}
-  lightSections: 200
+  lightSections: 1000
+--- !u!114 &415875267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957708682001177850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2872808464943c591079e44006aad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!114 &415875271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957708682001177850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f4ef8e423f0214c8ff810aac29b176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
