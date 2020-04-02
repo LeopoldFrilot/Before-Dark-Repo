@@ -7,10 +7,15 @@ public class GoblinController : MonoBehaviour
     int maxHealth = 100;
     int curHealth = 100;
 
+    public float lookRadius = 10f;
+
+    Transform targer;
+    NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -28,5 +33,11 @@ public class GoblinController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 }
