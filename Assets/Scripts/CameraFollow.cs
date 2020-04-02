@@ -23,6 +23,9 @@ public class CameraFollow : MonoBehaviour
     private float rotY = 0.0f;
     private float rotX = 0.0f;
 
+    //Calling GameLoop for Pausing
+    public GameObject gameManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +35,22 @@ public class CameraFollow : MonoBehaviour
         rotX = rot.x;
         Cursor.lockState = CursorLockMode.Locked; //locks cursor in the middle of the scrren
         Cursor.visible = false; //make cursor invisible
-        
+        gameManager = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
     void Update() {
+        if (gameManager.GetComponent<GameLoop>().IsPaused())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            return;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked; //locks cursor in the middle of the scrren
+            Cursor.visible = false; //make cursor invisible
+        }
         // set up rotation for analog sticks here (supports controller input as well)
 
         //float inputX = Input.GetAxis("RightStickHorizontal");

@@ -8,6 +8,7 @@ public class UIUpdater : MonoBehaviour
     public GameObject gameManager;
     public GameObject health;
     public GameObject time;
+    public GameObject pauseScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,27 @@ public class UIUpdater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateHealth();
+        UpdateTime();
+        CheckPause();
+    }
+    private void UpdateHealth()
+    {
         health.GetComponent<Text>().text = "Health: " + (int)gameManager.GetComponent<GameLoop>().currHealth;
+    }
+    private void UpdateTime()
+    {
         time.GetComponent<Text>().text = "Time: " + (int)gameManager.GetComponent<GameLoop>().timer;
+    }
+    private void CheckPause()
+    {
+        if (gameManager.GetComponent<GameLoop>().IsPaused())
+        {
+            pauseScreen.SetActive(true);
+        }
+        else
+        {
+            pauseScreen.SetActive(false);
+        }
     }
 }

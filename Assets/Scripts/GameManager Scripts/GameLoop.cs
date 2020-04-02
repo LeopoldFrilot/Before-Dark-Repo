@@ -51,38 +51,22 @@ public class GameLoop : MonoBehaviour
             UpdateTime();
             CheckAutosave();
         }
-        else if(state == State.Pause)
+        /*else if(state == State.Pause)
         {
-            Pause();
+
         }
         else
         {
             // No other states yet
-        }
+        }*/
     }
 
     private void CheckInputs()
     {
         if (Input.GetButtonDown("Cancel")) // "esc" button to pause
         {
-                Debug.Log("Pause game (SCREEN NOT IMPLEMENTED, PRESS SPACE TO RESUME)");
+                Debug.Log("Pause game");
                 state = State.Pause;
-        }
-        // Saves for now
-        if (Input.GetButtonDown("Save")) // "=" button
-        {
-            state = State.Pause;
-            Debug.Log("Saving...");
-            SaveState();
-            state = State.Play;
-        }
-        // Loads save for now
-        if(Input.GetButtonDown("Load")) // "-" button
-        {
-            state = State.Pause;
-            Debug.Log("Loading...");
-            LoadState();
-            state = State.Play;
         }
     }
     private void UpdateTime()
@@ -116,28 +100,7 @@ public class GameLoop : MonoBehaviour
             currHealth = maxHealth;
         }
     }// Will be called when Pablo is hit or consumes a snack
-    public void SaveState()
-    {
-        SaveManager.SaveState(this);
-        Debug.Log("Saved");
-    }
-    public void LoadState() // Loading completely from nothing (mainly used for the continue button)
-    {
-        PlayerData data = SaveManager.LoadState();
-        // currLevel = data.currLevel;  This SHOULD not be needed, but I'll keep it here for now
-        currHealth = data.currHealth;
-        timer = data.currTime;
-        maxHealth = data.maxHealth;
-
-        Vector3 loadedPosition;
-        loadedPosition.x = data.playerPosition[0];
-        loadedPosition.y = data.playerPosition[1];
-        loadedPosition.z = data.playerPosition[2];
-        pablo.transform.position = loadedPosition;
-        Debug.Log(pablo.transform.position);
-        Debug.Log("Loaded");
-        GetComponent<LightAdjuster>().InitializeSun(); // The sun will go back where it needs to based on the time.
-    }
+    
     public Vector3 StartingPlacePerLevel(int levelNum) // To be edited later
     {
         if (levelNum == 1)
@@ -154,26 +117,59 @@ public class GameLoop : MonoBehaviour
             return new Vector3(0, 0, 0);
     }
 
-    public void Pause()
+    public void Resume()
     {
         // Create Pause screen
-        if (Input.GetButtonDown("Submit")) // "space" button to unpause
-        {
-            Debug.Log("Resume game");
-            state = State.Play;
-        }
-        if (Input.GetButtonDown("Save")) // "=" key to quit
-        {
-            Debug.Log("Quit game");
-            Application.Quit();
-        }
+        Debug.Log("Resume game");
+        state = State.Play;
     }
 
+    public void Quit()
+    {
+        Debug.Log("Quit game");
+        Application.Quit();
+    }
+
+    public void Save()
+    {
+        Debug.Log("Saving...");
+        Invoke("SaveState", 1f);
+        Debug.Log("Saved");
+    }
+
+    public void Load()
+    {
+        Debug.Log("Loading...");
+        Invoke("LoadState", 1f);
+        Debug.Log("Loaded");
+        Invoke("Resume",.5f);
+    }
     public bool IsPaused()
     {
         if (state == State.Pause)
             return true;
         else
             return false;
+    }
+
+    public void SaveState()
+    {
+        SaveManager.SaveState(this);
+    }
+    public void LoadState() // Loading completely from nothing (mainly used for the continue button)
+    {
+        PlayerData data = SaveManager.LoadState();
+        // currLevel = data.currLevel;  This SHOULD not be needed, but I'll keep it here for now
+        currHealth = data.currHealth;
+        timer = data.currTime;
+        maxHealth = data.maxHealth;
+
+        Vector3 loadedPosition;
+        loadedPosition.x = data.playerPosition[0];
+        loadedPosition.y = data.playerPosition[1];
+        loadedPosition.z = data.playerPosition[2];
+        pablo.transform.position = loadedPosition;
+        Debug.Log(pablo.transform.position);
+        GetComponent<LightAdjuster>().InitializeSun(); // The sun will go back where it needs to based on the time.
     }
 }
