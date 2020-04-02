@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 0a8283103661241748be03621925c759, type: 2}
 --- !u!4 &54023423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8070352558957603641, guid: 075a74e4e6c0c1c4eb0075d617261c3e,
@@ -289,6 +289,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2957708682174413641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &415875267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415875266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2872808464943c591079e44006aad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 793451785}
 --- !u!114 &415875271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +348,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &793451785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3689342772840990843, guid: f667f059665cbe9499363f4f7e8b870a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2018307629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986895230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,6 +361,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198391635535588342, guid: 4ef455e742188794483aaefe2c199efc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070625530803013341, guid: 4ef455e742188794483aaefe2c199efc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380778176273276965, guid: 4ef455e742188794483aaefe2c199efc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437039560215303394, guid: 4ef455e742188794483aaefe2c199efc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7437039560965097960, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -775,6 +814,47 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2018307629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1776524455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3636635173241827074, guid: c212baaad05f8b440865a4938970c806,
+    type: 3}
+  m_PrefabInstance: {fileID: 8322975603575081226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1776524456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776524455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf88eeacf21ef4c5fbf86716e230681e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookRadius: 10
+--- !u!195 &1776524457
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776524455}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &1810997428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1789075595884033073, guid: 256f23baa763dfd4a8b847f16789fea9,
@@ -1287,7 +1367,7 @@ PrefabInstance:
     - target: {fileID: 7851940998777125093, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 7851940998777125093, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
