@@ -12,8 +12,6 @@ public class UIUpdater : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager");
-        health = gameObject.transform.GetChild(0).gameObject;
-        time = gameObject.transform.GetChild(1).gameObject;
     }
 
     // Update is called once per frame
