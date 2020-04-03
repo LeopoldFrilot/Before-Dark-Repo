@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 3689342772029951087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.9751725, y: 1, z: 3.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3689342772840502363}
   - {fileID: 337292802}
@@ -147,6 +147,8 @@ MonoBehaviour:
   animate: {fileID: 3689342772831517627}
   pivot: {fileID: 0}
   rotationSpeed: 5
+  numSearches: 0
+  gameManager: {fileID: 0}
   playerModel: {fileID: 3689342772840990843}
 --- !u!143 &3689342772029951082
 CharacterController:

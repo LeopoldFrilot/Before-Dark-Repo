@@ -34,6 +34,7 @@ public class GameLoop : MonoBehaviour
         {
             timer = maxTime;
             currHealth = maxHealth;
+            pablo.transform.position = StartingPlacePerLevel(currLevel);
         }
         else
         {
@@ -104,7 +105,7 @@ public class GameLoop : MonoBehaviour
     public Vector3 StartingPlacePerLevel(int levelNum) // To be edited later
     {
         if (levelNum == 1)
-            return new Vector3(0, 0, 0);
+            return new Vector3(-15f, 5.5f, -106f);
         if (levelNum == 2)
             return new Vector3(0, 0, 0);
         if (levelNum == 3)

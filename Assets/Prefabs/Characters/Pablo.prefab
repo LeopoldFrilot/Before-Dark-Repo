@@ -257,6 +257,8 @@ MonoBehaviour:
   animate: {fileID: 0}
   pivot: {fileID: 0}
   rotationSpeed: 5
+  numSearches: 0
+  gameManager: {fileID: 0}
   playerModel: {fileID: 7074090087481364062}
 --- !u!1001 &3357022901724750363
 PrefabInstance:
