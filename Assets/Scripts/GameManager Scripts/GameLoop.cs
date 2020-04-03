@@ -66,8 +66,7 @@ public class GameLoop : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel")) // "esc" button to pause
         {
-                Debug.Log("Pause game");
-                state = State.Pause;
+            Pause();
         }
     }
     private void UpdateTime()
@@ -76,8 +75,9 @@ public class GameLoop : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
-        else if(timer == 0)
+        else if(timer <= 0)
         {
+            Pause();
             GetComponent<SceneSwitch>().LoadLoseScreen();
         }
     }
@@ -116,6 +116,12 @@ public class GameLoop : MonoBehaviour
             return new Vector3(0, 0, 0);
         else
             return new Vector3(0, 0, 0);
+    }
+
+    public void Pause()
+    {
+        Debug.Log("Pause game");
+        state = State.Pause;
     }
 
     public void Resume()

@@ -10,6 +10,7 @@ public class SceneSwitch : MonoBehaviour
     // Variables for scenes
     string settingsScn = "Settings Screen";
     string loseScn = "Lose Screen";
+    string winScn = "Win Screen";
 
     private void Start()
     {
@@ -41,6 +42,10 @@ public class SceneSwitch : MonoBehaviour
     public void LoadLoseScreen()
     {
         SceneManager.LoadScene(loseScn);
+    }
+    public void LoadWinScreen()
+    {
+        SceneManager.LoadScene(winScn);
     }
     // Add any other scenes in this fashion that appear in the 'Misc Scenes' folder
 
