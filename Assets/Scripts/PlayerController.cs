@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection; //vector object ref used to control move direction (x,y,z)
     public float gravityScale;  //float to control gravity from inspector
 
-    public Animator animate; //used for animation of charactor model
+    //public Animator animate; //used for animation of charactor model
+    public Animator animate2;
+
+
     public Transform pivot; //setting charachter to turn with camera rotation
     public float rotationSpeed; //rotation speed of character 
 
@@ -68,10 +71,10 @@ public class PlayerController : MonoBehaviour
             { //jump
                 moveDirection.y = jumpForce; //jump is applied in y axis direction
             }
-            else if (Input.GetButtonDown("Fire1"))
-            {
-                animate.SetTrigger("Attack");
-            }
+            //else if (Input.GetButtonDown("Fire1"))
+            //{
+            //    animate.SetTrigger("Attack");
+            //}
         }
         //to smooth out frames over different systems x Time.deltaTime 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
@@ -87,6 +90,9 @@ public class PlayerController : MonoBehaviour
         }
 
         //this code animates character to run motion when directional keys are pressed 
-        animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        //animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        //animate.SetBool("isGrounded", controller.isGrounded);
+        animate2.SetFloat("Speed2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizonatal"))));
+  
     }
 }
