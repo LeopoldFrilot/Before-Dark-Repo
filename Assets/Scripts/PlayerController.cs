@@ -92,7 +92,8 @@ public class PlayerController : MonoBehaviour
         //this code animates character to run motion when directional keys are pressed 
         //animate.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         //animate.SetBool("isGrounded", controller.isGrounded);
-        animate2.SetFloat("Speed2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizonatal"))));
+        animate2.SetFloat("Speed2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
+        animate2.SetBool("isGrounded", controller.isGrounded);
   
     }
 }
