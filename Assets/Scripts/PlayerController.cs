@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             }
             //else if (Input.GetButtonDown("Fire1"))
             //{
-            //    animate.SetTrigger("Attack");
+            //    animate2.SetTrigger("Player_Attack");
             //}
         }
         //to smooth out frames over different systems x Time.deltaTime 
@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         //animate.SetBool("isGrounded", controller.isGrounded);
         animate2.SetFloat("Speed2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
         animate2.SetBool("isGrounded", controller.isGrounded);
+        
   
     }
 }
