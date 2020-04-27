@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf88eeacf21ef4c5fbf86716e230681e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 50
 --- !u!195 &2890186558226159753
 NavMeshAgent:
   m_ObjectHideFlags: 0
