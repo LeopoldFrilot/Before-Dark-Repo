@@ -10,6 +10,8 @@ public class UIUpdater : MonoBehaviour
     public GameObject time;
     public GameObject timeSlider;
     public GameObject pauseScreen;
+    public GameObject objBox;
+    public GameObject HUD;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class UIUpdater : MonoBehaviour
         UpdateHealth();
         UpdateTime();
         CheckPause();
+        CheckHUDOverrides();
     }
     private void UpdateHealth()
     {
@@ -43,6 +46,31 @@ public class UIUpdater : MonoBehaviour
         else
         {
             pauseScreen.SetActive(false);
+        }
+    }
+    private void CheckHUDOverrides()
+    {
+        if (Input.GetKeyDown("h"))
+        {
+            if (HUD.active)
+            {
+                HUD.SetActive(false);
+            }
+            else
+            {
+                HUD.SetActive(true);
+            }
+        }
+        if (Input.GetKeyDown("j") && HUD.active)
+        {
+            if (objBox.active)
+            {
+                objBox.SetActive(false);
+            }
+            else
+            {
+                objBox.SetActive(true);
+            }
         }
     }
 }

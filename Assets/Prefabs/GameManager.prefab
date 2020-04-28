@@ -63,7 +63,7 @@ MonoBehaviour:
   autoSaveWindow: 60
   timerPenaltyForDying: 10
   currLevel: 0
-  maxTime: 300
+  maxTime: 200
   maxHealth: 500
   timer: 0
   currHealth: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingSunRotation: 90
-  maxSunRotation: 180
+  maxSunRotation: 165
   sun: {fileID: 0}
   lightSections: 1000
 --- !u!114 &415875267
