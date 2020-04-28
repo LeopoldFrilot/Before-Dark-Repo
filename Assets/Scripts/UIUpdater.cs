@@ -8,6 +8,7 @@ public class UIUpdater : MonoBehaviour
     public GameObject gameManager;
     public GameObject health;
     public GameObject time;
+    public GameObject timeSlider;
     public GameObject pauseScreen;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,10 @@ public class UIUpdater : MonoBehaviour
     }
     private void UpdateTime()
     {
-        time.GetComponent<Text>().text = "Time: " + (int)gameManager.GetComponent<GameLoop>().timer;
+        float timeFound = gameManager.GetComponent<GameLoop>().timer;
+        float maxTime = gameManager.GetComponent<GameLoop>().maxTime;
+        time.GetComponent<Text>().text = "Time: " + (int)timeFound;
+        timeSlider.GetComponent<Slider>().value = 1-(timeFound / maxTime);
     }
     private void CheckPause()
     {
