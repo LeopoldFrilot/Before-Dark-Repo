@@ -9,6 +9,7 @@ public class GoblinController : MonoBehaviour
     int curHealth = 100;
 
     public float lookRadius = 10f;
+    public Animator anim;
 
     Transform target;
     NavMeshAgent agent;
@@ -40,11 +41,14 @@ public class GoblinController : MonoBehaviour
         {
             agent.SetDestination(target.position);
 
-            if(distance <= agent.stoppingDistance)
+            anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
+            
+            if (distance <= agent.stoppingDistance)
             {
                 //Attack player
             }
         }
+      
     }
 
     void OnDrawGizmosSelected()
@@ -52,4 +56,6 @@ public class GoblinController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
+    
+
 }
