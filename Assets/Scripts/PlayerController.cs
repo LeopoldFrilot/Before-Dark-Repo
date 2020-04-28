@@ -71,10 +71,10 @@ public class PlayerController : MonoBehaviour
             { //jump
                 moveDirection.y = jumpForce; //jump is applied in y axis direction
             }
-            //else if (Input.GetButtonDown("Fire1"))
-            //{
-            //    animate2.SetTrigger("Player_Attack");
-            //}
+            else if (Input.GetButtonDown("Fire1"))
+            {
+               animate2.SetTrigger("Player_Attack");
+            }
         }
         //to smooth out frames over different systems x Time.deltaTime 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale * Time.deltaTime);
