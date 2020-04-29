@@ -23,7 +23,7 @@ public class GoblinController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name == "fx_weapon" || col.gameObject.name == "Bip001 Prop2")
+        if(col.gameObject.name == "Stick.R" || col.gameObject.name == "Bip001 Prop2")
         {
             Debug.Log("Hit");
             curHealth -= 10;
