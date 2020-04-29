@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 6601475967041616176}
   - component: {fileID: 2890186558226159752}
   - component: {fileID: 2890186558226159753}
-  - component: {fileID: 1774696973}
+  - component: {fileID: 1187395540}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemy
@@ -385,7 +385,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!95 &1774696973
+--- !u!95 &1187395540
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
