@@ -127,6 +127,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8070352559009529798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &211080680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2472078956166710353, guid: f667f059665cbe9499363f4f7e8b870a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2018307629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &211080681
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211080680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.00071808865
+  m_Height: 0.013555005
+  m_Direction: 1
+  m_Center: {x: -0.0001409803, y: 0.0041142106, z: 0.0000000024401063}
 --- !u!1 &310574627
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,37 +644,37 @@ PrefabInstance:
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14463708
+      value: 0.08717229
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8531138
+      value: 0.89959055
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3868117
+      value: 0.21045256
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3188318
+      value: -0.37262255
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 447.61124
+      value: 551.3743
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -58.09012
+      value: -4.729596
       objectReference: {fileID: 0}
     - target: {fileID: 6198552773206489684, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 468.67053
+      value: 501.15866
       objectReference: {fileID: 0}
     - target: {fileID: 7437039560965097960, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
@@ -724,37 +744,37 @@ PrefabInstance:
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14463708
+      value: 0.08717229
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8531138
+      value: 0.89959055
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3868117
+      value: 0.21045256
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3188318
+      value: -0.37262255
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 456.27716
+      value: 545.19574
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -145.50061
+      value: -49.944958
       objectReference: {fileID: 0}
     - target: {fileID: 8700192111398299311, guid: 4ef455e742188794483aaefe2c199efc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 529.08014
+      value: 506.39355
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ef455e742188794483aaefe2c199efc, type: 3}
