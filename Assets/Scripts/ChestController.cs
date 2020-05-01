@@ -9,12 +9,14 @@ public class ChestController : MonoBehaviour
     AudioSource audioSource;
     Rigidbody chest;
     bool isVisible = false;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
         chest = GetComponent<Rigidbody>();
         MainCamera = GameObject.Find("Main Camera");
+        gameManager = GameObject.Find("GameManager");
         audioSource = MainCamera.GetComponent<AudioSource>();
     }
 
@@ -24,16 +26,12 @@ public class ChestController : MonoBehaviour
         if(chest.velocity == new Vector3(0,0,0))
         {
             isVisible = true;
+            chest.constraints = RigidbodyConstraints.None;
         }
         if (isVisible)
         {
-            gameObject.GetComponent<Renderer>().enabled = true;
-            gameObject.transform.Find("Button").GetComponent<Renderer>().enabled = true;
-        }
-        else
-        {
-            gameObject.GetComponent<Renderer>().enabled = false;
-            gameObject.transform.Find("Button").GetComponent<Renderer>().enabled = false;
+            gameObject.transform.Find("chest_close").GetComponent<Renderer>().enabled = true;
+            gameObject.transform.Find("chest_close").Find("Bottom").GetComponent<Renderer>().enabled = true;
         }
     }
     void OnCollisionEnter(Collision col)
@@ -41,7 +39,7 @@ public class ChestController : MonoBehaviour
         if (col.gameObject.name == "Stick.R" )//|| col.gameObject.name == "Bip001 Prop2")
         {
             Debug.Log("Chest Opened!");
-            audioSource.PlayOneShot(soundClip, 0.5f);
+            audioSource.PlayOneShot(soundClip);
             AddRandomItem(UnityEngine.Random.Range(0f, 9f));
             AddGroceryItem();
             Destroy(gameObject);
@@ -49,7 +47,7 @@ public class ChestController : MonoBehaviour
     }
     private void AddGroceryItem()
     {
-
+        gameManager.GetComponent<InventoryManager>().groceriesCollected += 1;
     }
 
     private void AddRandomItem(float num)
