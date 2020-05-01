@@ -21,20 +21,18 @@ public class ChestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(chest.velocity == new Vector3(0,0,0))
+        /*if(chest.velocity == new Vector3(0,0,0))
         {
             isVisible = true;
         }
         if (isVisible)
         {
-            gameObject.GetComponent<Renderer>().enabled = true;
-            gameObject.transform.Find("Button").GetComponent<Renderer>().enabled = true;
+            gameObject.transform.Find("chest_close").GetComponent<Renderer>().enabled = true;
         }
         else
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
-            gameObject.transform.Find("Button").GetComponent<Renderer>().enabled = false;
-        }
+            gameObject.transform.Find("chest_close").GetComponent<Renderer>().enabled = false;
+        }*/
     }
     void OnCollisionEnter(Collision col)
     {
