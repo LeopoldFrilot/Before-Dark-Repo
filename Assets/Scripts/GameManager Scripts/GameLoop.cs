@@ -20,7 +20,7 @@ public class GameLoop : MonoBehaviour
     AudioSource audioSource;
 
     // Variables to be saved/stored
-    public float maxTime = 300f;
+    public float maxTime = 600f;
     public float maxHealth = 500f;
     public float timer;
     public float currHealth;
@@ -31,7 +31,7 @@ public class GameLoop : MonoBehaviour
  
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         MainCamera = GameObject.Find("Main Camera");
         audioSource = MainCamera.GetComponent<AudioSource>();
@@ -125,7 +125,7 @@ public class GameLoop : MonoBehaviour
         if (levelNum == 1)
             return new Vector3(-15f, 5.5f, -106f);
         if (levelNum == 2)
-            return new Vector3(0, 0, 0);
+            return new Vector3(640f, 8f, -433f);
         if (levelNum == 3)
             return new Vector3(0, 0, 0);
         if (levelNum == 4)
