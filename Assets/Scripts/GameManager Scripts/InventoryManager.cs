@@ -6,6 +6,8 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public int initialChestNum = 20;
+    public int groceriesCollected = 0;
+    public int groceriesToCollect = 5;
 
     // boundaries of the map
     public float maxPosX = 100f;

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 
 
@@ -7,12 +8,16 @@ public class GameLoop : MonoBehaviour
 {
     // Calling External Objects for later use
     public GameObject pablo;
+    public GameObject MainCamera;
+    public GameObject Boss;
 
     // Variables for function
     public float autoSaveWindow = 10f;
     float timeWithoutSave = 0f;
     public float timerPenaltyForDying = 10f;
     public int currLevel;
+    public AudioClip instructionsClip;
+    AudioSource audioSource;
 
     // Variables to be saved/stored
     public float maxTime = 300f;
@@ -21,14 +26,17 @@ public class GameLoop : MonoBehaviour
     public float currHealth;
 
     // Possible states that the game can be in
-    enum State { Play, Pause}
+    enum State { Play, Pause, Boss}
     State state;
  
 
     // Start is called before the first frame update
     void Start()
     {
+        MainCamera = GameObject.Find("Main Camera");
+        audioSource = MainCamera.GetComponent<AudioSource>();
         state = State.Play;
+        audioSource.PlayOneShot(instructionsClip, 5.0f);
         currLevel = GetComponent<SceneSwitch>().GetCurrSceneIndex();
         if(currLevel == 1)
         {
@@ -51,15 +59,25 @@ public class GameLoop : MonoBehaviour
             CheckInputs();
             UpdateTime();
             CheckAutosave();
+            if(GetComponent<InventoryManager>().groceriesCollected >= GetComponent<InventoryManager>().groceriesToCollect)
+            {
+                state = State.Boss;
+            }
         }
-        /*else if(state == State.Pause)
+        else if(state == State.Boss)
         {
-
+            Debug.Log("Bosstime");
+            ActivateBoss();
         }
-        else
+        /*else
         {
             // No other states yet
         }*/
+    }
+
+    private void ActivateBoss()
+    {
+        Boss.SetActive(true);
     }
 
     private void CheckInputs()
