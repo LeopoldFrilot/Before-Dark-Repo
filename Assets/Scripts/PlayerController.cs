@@ -24,11 +24,14 @@ public class PlayerController : MonoBehaviour
     public GameObject gameManager;
     
     public GameObject playerModel;
+
+    private GameLoop gameLoop;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>(); //initializes public controller variable in inspector
         gameManager = GameObject.Find("GameManager");
+        gameLoop = gameManager.GetComponent<GameLoop>();
     }
 
     void findItem()
@@ -96,5 +99,14 @@ public class PlayerController : MonoBehaviour
         animate2.SetBool("isGrounded", controller.isGrounded);
         
   
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.name == "shNoj.L." || col.gameObject.name == "Bip001 Prop2")
+        {
+            float dmg = -10f;
+            gameLoop.UpdateHealth(dmg);
+        }
     }
 }
