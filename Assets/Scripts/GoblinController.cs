@@ -9,7 +9,7 @@ public class GoblinController : MonoBehaviour
     int curHealth = 100;
 
     public float lookRadius = 10f;
-    public Animator anim;
+    public Animator anim_2;
 
     Transform target;
     NavMeshAgent agent;
@@ -40,9 +40,11 @@ public class GoblinController : MonoBehaviour
         if(distance <= lookRadius)
         {
             agent.SetDestination(target.position);
+            //anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
+            //anim2.SetFloat
 
-            anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
-            
+
+            anim_2.SetFloat("Speed_2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
             if (distance <= agent.stoppingDistance)
             {
                 //Attack player
