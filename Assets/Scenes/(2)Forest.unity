@@ -602,6 +602,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 2009197440}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,6 +841,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1277274352}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -916,6 +926,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1736725482}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,6 +1042,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1609257281}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1107,6 +1127,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1700048142}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1345,6 +1370,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1335363850}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1601,6 +1631,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 1112977689}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1724,6 +1759,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 457477513}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x
