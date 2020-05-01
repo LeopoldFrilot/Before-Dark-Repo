@@ -16,7 +16,7 @@ public class TempWinCondition : MonoBehaviour
         {
             Debug.Log("Win");
             gameManager.GetComponent<GameLoop>().Pause();
-            gameManager.GetComponent<SceneSwitch>().LoadWinScreen();
+            gameManager.GetComponent<SceneSwitch>().LoadNextLevel();
         }
     }
 }

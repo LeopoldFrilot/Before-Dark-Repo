@@ -4120,7 +4120,7 @@ PrefabInstance:
         type: 3}
       propertyPath: instructionsClip
       value: 
-      objectReference: {fileID: 8300000, guid: eb4a035883a168040bb0888a648492d2, type: 3}
+      objectReference: {fileID: 8300000, guid: cef0d7ba30b91e945a9cefee76e16e15, type: 3}
     m_RemovedComponents:
     - {fileID: 415875267, guid: 791bd4468f61af643a97d2933ac980c1, type: 3}
     - {fileID: 415875271, guid: 791bd4468f61af643a97d2933ac980c1, type: 3}
@@ -19871,12 +19871,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742355508}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &744536636 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 231976173909071818, guid: 2d004500821ecc944bcf4d13d1c8efb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 993402871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &744757053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26767,21 +26761,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowBossLVL2
       objectReference: {fileID: 0}
-    - target: {fileID: 2493173627218435550, guid: 2d004500821ecc944bcf4d13d1c8efb8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7401064450420472151, guid: 2d004500821ecc944bcf4d13d1c8efb8,
-        type: 3}
-      propertyPath: lookRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7401064450420472151, guid: 2d004500821ecc944bcf4d13d1c8efb8,
-        type: 3}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 744536636}
     - target: {fileID: 8942414813855779385, guid: 2d004500821ecc944bcf4d13d1c8efb8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43368,6 +43347,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 794096320941779381, guid: aacb3368631ac884591ebc17a636abea,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 794096322586139258, guid: aacb3368631ac884591ebc17a636abea,
         type: 3}
       propertyPath: m_LocalPosition.x

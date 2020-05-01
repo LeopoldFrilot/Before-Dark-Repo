@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 //using System.Diagnostics;
 using UnityEngine;
+using TMPro;
 
 
 public class GameLoop : MonoBehaviour
@@ -18,6 +19,7 @@ public class GameLoop : MonoBehaviour
     public int currLevel;
     public AudioClip instructionsClip;
     AudioSource audioSource;
+    public GameObject objective;
 
     // Variables to be saved/stored
     public float maxTime = 600f;
@@ -34,6 +36,7 @@ public class GameLoop : MonoBehaviour
     void Awake()
     {
         MainCamera = GameObject.Find("Main Camera");
+        objective = GameObject.Find("Objective");
         audioSource = MainCamera.GetComponent<AudioSource>();
         state = State.Play;
         audioSource.PlayOneShot(instructionsClip, 5.0f);
@@ -78,6 +81,7 @@ public class GameLoop : MonoBehaviour
     private void ActivateBoss()
     {
         Boss.SetActive(true);
+        objective.GetComponent<TextMeshProUGUI>().text = "O   Defeat the Shadow Boss to win the level!";
     }
 
     private void CheckInputs()

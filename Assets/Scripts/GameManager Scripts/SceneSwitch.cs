@@ -23,7 +23,14 @@ public class SceneSwitch : MonoBehaviour
     public void LoadNextLevel()
     {
         int currScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currScene + 1);
+        if(currScene == 2)
+        {
+            LoadWinScreen();
+        }
+        else
+        {
+            SceneManager.LoadScene(currScene + 1);
+        }
     }
     public int GetCurrSceneIndex()
     {
