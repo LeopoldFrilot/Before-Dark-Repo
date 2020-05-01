@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     public float maxNegX = -500f;
     public float maxPosZ = 100f;
     public float maxNegZ = -200f;
-    public float dropHeight = 500f;
+    public float dropHeight = 50f;
 
     public GameObject Chest;
 
