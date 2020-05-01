@@ -784,7 +784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Again?
+  m_Text: YOU WIN!!!
 --- !u!222 &1354238942
 CanvasRenderer:
   m_ObjectHideFlags: 0

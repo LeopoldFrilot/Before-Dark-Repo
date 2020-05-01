@@ -18037,17 +18037,17 @@ PrefabInstance:
     - target: {fileID: 5466321532714237942, guid: 65cb16335837b2d49a685e9c7eaf15a0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5466321532714237942, guid: 65cb16335837b2d49a685e9c7eaf15a0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5466321532714237942, guid: 65cb16335837b2d49a685e9c7eaf15a0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5466321532714237943, guid: 65cb16335837b2d49a685e9c7eaf15a0,
         type: 3}
@@ -43347,10 +43347,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 794096320941779378, guid: aacb3368631ac884591ebc17a636abea,
+        type: 3}
+      propertyPath: minDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 794096320941779378, guid: aacb3368631ac884591ebc17a636abea,
+        type: 3}
+      propertyPath: maxDistance
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 794096320941779381, guid: aacb3368631ac884591ebc17a636abea,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 794096322586139258, guid: aacb3368631ac884591ebc17a636abea,
         type: 3}
@@ -43417,7 +43427,13 @@ PrefabInstance:
       propertyPath: CameraFollowObj
       value: 
       objectReference: {fileID: 742105200}
-    m_RemovedComponents: []
+    - target: {fileID: 794096322586139261, guid: aacb3368631ac884591ebc17a636abea,
+        type: 3}
+      propertyPath: inputSensitivity
+      value: 200
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 794096320941779380, guid: aacb3368631ac884591ebc17a636abea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aacb3368631ac884591ebc17a636abea, type: 3}
 --- !u!1 &1631395190
 GameObject:
@@ -52533,6 +52549,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047077743337385961, guid: 310466a38e21952409d8c58f8f6b3f48,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047077743337385961, guid: 310466a38e21952409d8c58f8f6b3f48,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047077743337385961, guid: 310466a38e21952409d8c58f8f6b3f48,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7047077743337385963, guid: 310466a38e21952409d8c58f8f6b3f48,
         type: 3}
