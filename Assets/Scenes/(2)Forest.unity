@@ -1316,6 +1316,11 @@ PrefabInstance:
       propertyPath: anim_2
       value: 
       objectReference: {fileID: 2890186558874207266}
+    - target: {fileID: 2890186558226159753, guid: c212baaad05f8b440865a4938970c806,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3993168768128005583, guid: c212baaad05f8b440865a4938970c806,
         type: 3}
       propertyPath: m_LocalPosition.x

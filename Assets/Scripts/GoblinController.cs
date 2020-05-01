@@ -43,12 +43,13 @@ public class GoblinController : MonoBehaviour
             //anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
             //anim2.SetFloat
 
-
             anim_2.SetFloat("Speed_2", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
-            if (distance <= agent.stoppingDistance)
+            if (distance <= agent.stoppingDistance+1 && !anim_2.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
             {
-                //Attack player
+                anim_2.SetTrigger("Attack");
+                Debug.Log("Goblin Attack");
             }
+            
         }
       
     }
