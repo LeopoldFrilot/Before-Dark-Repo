@@ -40,7 +40,7 @@ public class BossController : MonoBehaviour
         {
             agent.SetDestination(target.position);
 
-            anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
+            //anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal")))); //tesing animation movement for npc
             
             if (distance <= agent.stoppingDistance)
             {
