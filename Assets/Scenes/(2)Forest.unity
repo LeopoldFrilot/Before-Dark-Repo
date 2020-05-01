@@ -2552,7 +2552,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c47d618382d888f4987e01b3d03bcd23,
+      objectReference: {fileID: 21300000, guid: 3dbf4b22b55bda4459c681760795c7f5,
         type: 3}
     - target: {fileID: 2098428778962834902, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
@@ -2852,27 +2852,38 @@ PrefabInstance:
     - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 57
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
+        type: 3}
+      propertyPath: m_text
+      value: O   Break open chests with your stick to find 10 groceries before the
+        time runs out
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809774565745429892, guid: 7cf53a1dcf494d746b612ed046b79347,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 8431356179995462657, guid: 7cf53a1dcf494d746b612ed046b79347,
         type: 3}
